@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Natanius trainings</string>
+    <string name="text">Готов тренить?</string>
+    <string name="button">ДА!</string>
+    <string name="about_text">Ну тогда трень!</string>
+    <string name="button2">НЕТ</string>
+    <string name="text3">Че пришел?!</string>
+    <string name="emom">EMOM</string>
+    <string name="timerStart">Запуск</string>
+    <string name="edittext_hint"><font size="10">ПОДХОДИКОВ</font></string>
+
+</resources>
