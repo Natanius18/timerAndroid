@@ -25,6 +25,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class EMOM extends Activity {
 
+    private int secondsToGetReady = 3;
+
     @SuppressLint({"UseSwitchCompatOrMaterialCode", "ClickableViewAccessibility"})
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -136,8 +138,7 @@ public class EMOM extends Activity {
         if (ActivityTimer.getTimer() != null) {
             ActivityTimer.getTimer().cancel();
             ShowTime.setI(0);
-            ((RadioButton) findViewById(R.id.radioButton3)).setChecked(true);
-            onRadioButtonClicked(findViewById(R.id.radioButton3));
+            ShowTime.setMsToReady(secondsToGetReady);
         }
 
     }
@@ -164,16 +165,19 @@ public class EMOM extends Activity {
             case R.id.radioButton3:
                 if (checked) {
                     ShowTime.setMsToReady(3);
+                    secondsToGetReady = 3;
                 }
                 break;
             case R.id.radioButton5:
                 if (checked) {
                     ShowTime.setMsToReady(5);
+                    secondsToGetReady = 5;
                 }
                 break;
             case R.id.radioButton10:
                 if (checked) {
                     ShowTime.setMsToReady(10);
+                    secondsToGetReady = 10;
                 }
                 break;
         }

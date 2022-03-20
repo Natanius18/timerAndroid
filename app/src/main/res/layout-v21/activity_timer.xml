@@ -8,7 +8,6 @@
     tools:context=".aditional.Timer">
 
 
-
     <TextView
         android:id="@+id/timeLeft"
         android:layout_width="match_parent"
@@ -35,7 +34,7 @@
         android:text="50"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#00F10C"
+        android:textColor="#FF5C00"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
