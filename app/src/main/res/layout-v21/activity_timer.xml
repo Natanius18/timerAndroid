@@ -61,50 +61,51 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:backgroundTint="@color/gray"
-        android:onClick="weak"
-        android:src="@android:drawable/ic_media_pause"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setsLeft"
-        app:layout_constraintVertical_bias="0.4" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="65dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:backgroundTint="@color/gray"-->
+<!--        android:onClick="weak"-->
+<!--        android:src="@android:drawable/ic_media_pause"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/setsLeft"-->
+<!--        app:layout_constraintVertical_bias="0.4" />-->
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:max="100"
         android:progress="3"
         android:progressBackgroundTint="@color/gray"
-        android:rotation="270"
         android:thumbTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.886" />
 
-    <SeekBar
-        android:id="@+id/seekBar2"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:max="100"
-        android:progress="3"
-        android:progressBackgroundTint="@color/gray"
-        android:rotation="270"
-        android:thumbTint="@color/gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886" />
+<!--    <SeekBar-->
+<!--        android:id="@+id/seekBar2"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:max="100"-->
+<!--        android:progress="3"-->
+<!--        android:progressBackgroundTint="@color/gray"-->
+<!--        android:rotation="270"-->
+<!--        android:thumbTint="@color/gray"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.886" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

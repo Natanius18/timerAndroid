@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#060E49"
+    android:forceDarkAllowed="false"
     android:fitsSystemWindows="true"
-    tools:context=".activity.EMOM">
+    tools:context=".activity.EMOM"
+    tools:targetApi="q">
 
     <TextView
         android:id="@+id/timeLeft"
@@ -48,21 +50,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
+        android:textColor="#000000"
         android:scaleX="1.15"
         android:scaleY="1.15"
+        android:forceDarkAllowed="false"
         android:text="@string/timerStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.63"
-        tools:ignore="OnClick" />
+        tools:ignore="OnClick"
+        tools:targetApi="q" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ButtonMinus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
+        android:forceDarkAllowed="false"
         android:clickable="true"
         android:focusable="true"
         app:fabSize="mini"
@@ -72,13 +78,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.44"
-        app:srcCompat="@android:drawable/presence_busy" />
+        app:srcCompat="@android:drawable/presence_busy"
+        tools:targetApi="q" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ButtonPLUS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
+        android:forceDarkAllowed="false"
         android:clickable="true"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"

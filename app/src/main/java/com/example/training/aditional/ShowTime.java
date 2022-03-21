@@ -49,11 +49,6 @@ public class ShowTime {
             }
         } else {
             int left = (int) (millisUntilFinished / 1000) + 1;
-            int seconds = (int) ((millisUntilFinished / 1000 + 1) % 60);
-            int minutes = (int) ((millisUntilFinished / 1000 + 1) / 60);
-            timeLeft.setText((minutes < 10 ? "0" + minutes : minutes)
-                    + ":"
-                    + (seconds < 10 ? "0" + seconds : seconds));
             int leftInSet = (int) (left % milSecondsInOneSet);
             if (leftInSet == 0) {
                 bigDigits.setTextColor(Color.RED);
@@ -76,6 +71,11 @@ public class ShowTime {
                 }
             }
         }
+        int seconds = (int) ((millisUntilFinished / 1000 + 1) % 60);
+        int minutes = (int) ((millisUntilFinished / 1000 + 1) / 60);
+        timeLeft.setText((minutes < 10 ? "0" + minutes : minutes)
+                + ":"
+                + (seconds < 10 ? "0" + seconds : seconds));
     }
 
     @SuppressLint("SetTextI18n")

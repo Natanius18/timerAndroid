@@ -8,12 +8,9 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.RadioButton;
+import android.util.Log;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
@@ -24,7 +21,7 @@ import com.example.training.aditional.Timer;
 public class ActivityTimer extends Activity {
     @SuppressLint("StaticFieldLeak")
     private static Timer timer;
-
+    private static int volume = 100;
     public static Timer getTimer() {
         return timer;
     }
@@ -60,10 +57,14 @@ public class ActivityTimer extends Activity {
         timer.start();
 
         final SeekBar appVolume = findViewById(R.id.seekBar);
+        appVolume.setProgress(volume);
+        changeVolume((float) (1 - (Math.log(appVolume.getMax() - volume) / Math.log(appVolume.getMax()))),
+                whistle, tick, finishKong);
         appVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                changeVolume((float) (1 - (Math.log(appVolume.getMax() - i) / Math.log(appVolume.getMax()))),
+                volume = i;
+                changeVolume((float) (1 - (Math.log(appVolume.getMax() - volume) / Math.log(appVolume.getMax()))),
                         whistle, tick, finishKong);
 
             }
@@ -80,12 +81,11 @@ public class ActivityTimer extends Activity {
         });
     }
 
-
-    public void weak(View view) {
-        Toast toast = Toast.makeText(this, "Ты шо слабый?\nДавай делай!", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, -450);
-        toast.show();
-    }
+    //    public void weak(View view) {
+//        Toast toast = Toast.makeText(this, "Ты шо слабый?\nДавай делай!", Toast.LENGTH_SHORT);
+//        toast.setGravity(Gravity.CENTER, 0, -450);
+//        toast.show();
+//    }
 
     public void changeVolume(float vol, MediaPlayer whistle, MediaPlayer tick, MediaPlayer finishKong){
         whistle.setVolume(vol, vol);

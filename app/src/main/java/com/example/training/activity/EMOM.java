@@ -7,7 +7,6 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -142,6 +141,7 @@ public class EMOM extends Activity {
         }
 
     }
+
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.M)
